@@ -1,0 +1,22 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec3 vertexPosition_modelspace;
+
+
+out vec3 fragmentColor;
+
+// Values that stay constant for the whole mesh.
+uniform mat4 MVP;
+
+uniform vec3 sight_vec;
+uniform float hair_radius;
+uniform vec3 hair_center;
+
+void main(){
+  // Output position of the vertex, in clip space : MVP * position
+  gl_Position =  MVP * vec4(vertexPosition_modelspace,1);
+  float color = (3.0-dot(vertexPosition_modelspace-hair_center, sight_vec)/hair_radius)*0.25;
+  //color=1.0;
+  fragmentColor = vec3(color,color,color);
+}
