@@ -16,3 +16,6 @@ Los Angeles, CA 90115, USA
 Tel: +1 213-821-3552
 Fax: +1 213-821-5001
 Email: rakeshvp@usc.edu and ccto: accounting@stevens.usc.edu
+
+The Software contains GCO-v3.0. Please find its license in the following link.
+https://github.com/nsubtil/gco-v3.0/blob/master/GCO_README.TXT
